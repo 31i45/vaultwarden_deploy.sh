@@ -163,7 +163,7 @@ services:
     ports:
       - "$PORT:443"
     healthcheck:
-      test: ["CMD", "curl", "-k", "--silent", "--show-error", "--fail", "https://localhost:443/health"]
+      test: ["CMD", "/healthcheck.sh"]
       interval: 30s
       timeout: 10s
       retries: 3
